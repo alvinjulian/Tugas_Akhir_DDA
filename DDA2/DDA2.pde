@@ -1,5 +1,6 @@
 int[] data;
-boolean tombol;
+boolean tombol=false;
+int grapik=0;
 
 void setup()
 {
@@ -13,48 +14,34 @@ void setup()
 }
 
 void draw()
-{  
-  rect(10,10,50,50);
-  rect(70,10,110,50);
-  rect(230,10,100,50);
-  fill(255);
-  
+{ 
+  drawrect();
   if(tombol == true)
-{
-  mouseClicked();
+  {  
+    mouseClicked();
+  }
+
 }
-}
-void mouseClicked()
+void drawrect()
 {
-  if((mouseX > 10 && mouseX < 60 ) && (mouseY>10 && mouseY < 50))
-  {
-    if(mouseButton == LEFT)
-    {
-      tombol = false;
-      background(100);
-      steamchart(300, data);
-    }
-  }
-  if((mouseX > 70 && mouseX < 10 ) && (mouseY>10 && mouseY < 50))
-  {
-    if(mouseButton == LEFT)
-    {
-      tombol = false;
-      background(100);
-      steamchart(300, data);
-    }
-  }
-    if((mouseX > 210 && mouseX < 310 ) && (mouseY>10 && mouseY < 50))
-  {
-    if(mouseButton == LEFT)
-    { 
-      tombol = false;
-      background(100);
-      steamchart(300, data);
-    }
-  }
+  fill(255);
+  //tombol diagram
+  rect(10,10,100,50);
+  rect(120,10,100,50);
+  //tombol hari
+  rect(10,70,50,50);
+  rect(70,70,50,50);
+  rect(130,70,50,50);
+  rect(190,70,50,50);
+  rect(250,70,50,50);
+  rect(310,70,50,50);
+  rect(370,70,50,50);
+  rect(430,70,50,50);
+  
 }
 
+
+/// bkin pie chart
 void steamchart(float d, int[] data) // hasil copas, ganti semua angles ke var yg bakal dibuat
 {
   float lastAngle = 0;
@@ -67,5 +54,179 @@ void steamchart(float d, int[] data) // hasil copas, ganti semua angles ke var y
     fill(gray,red,blue);
     arc(width/2, height/2, d, d, lastAngle, lastAngle+radians(data[i]));
     lastAngle += radians(data[i]);
+  }
+}
+
+
+void mouseClicked()
+{
+  //////////////// menentukan bkin grafik apa/////////////////////
+  if((mouseX > 10 && mouseX < 110 ) && (mouseY>10 && mouseY < 60))
+  {
+    if(mouseButton == LEFT)
+    {
+       grapik=1;//pie chart
+       background(0);
+    }
+  }
+  else if((mouseX > 120 && mouseX < 220 ) && (mouseY>10 && mouseY < 60))
+  {
+    if(mouseButton == LEFT)
+    {
+       grapik=2;//batang
+       background(200);
+    }
+  }
+  ///////////// menentukan hari ////////////////////////////////////////
+  //// pie chart
+  if(grapik==1)
+  {
+    if((mouseX > 10 && mouseX < 60 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(100); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+    else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(120); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+    else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(120); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 130 && mouseX < 180 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(220); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 180 && mouseX < 240 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(20); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+  
+    else if ((mouseX > 250 && mouseX < 300 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(70); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 310 && mouseX < 360 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(260); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+  
+    else if ((mouseX > 370 && mouseX < 420 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(10); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(0); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+  }
+  ////// char batang////////////////////////////////
+  else if(grapik==2)
+  {
+      if((mouseX > 10 && mouseX < 60 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(100,0,100); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+    else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(120,0,0); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+    else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(120,120,0); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 130 && mouseX < 180 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(220,0,100); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 180 && mouseX < 240 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(20,0,20); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+  
+    else if ((mouseX > 250 && mouseX < 300 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(70,0,30); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 310 && mouseX < 360 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(0,160,0); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+  
+    else if ((mouseX > 370 && mouseX < 420 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(120,20,10); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
+  
+    else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
+    {
+      if(mouseButton == LEFT)
+      {
+        background(255); /// masukin chart pie hapus background kalau gk perlu
+      }
+    }
   }
 }
