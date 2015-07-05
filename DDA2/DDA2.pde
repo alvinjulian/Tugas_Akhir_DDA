@@ -24,19 +24,54 @@ void draw()
 }
 void drawrect()
 {
+  textSize(18);
+  text("Statistik Data Steam",600,20);
+  textSize(13);
+
   fill(255);
   //tombol diagram
   rect(10,10,100,50);
+  fill(0);
+  text("PIE",50,40);
+  fill(255);  
   rect(120,10,100,50);
+  fill(0);
+  text("BATANG",145,40);
+  fill(255);
   //tombol hari
   rect(10,70,50,50);
+    fill(0);
+  text("SENIN",15,100);
+  fill(255);
   rect(70,70,50,50);
+      fill(0);
+  text("SELASA",71,100);
+  fill(255);
   rect(130,70,50,50);
+      fill(0);
+  text("RABU",138,100);
+  fill(255);
   rect(190,70,50,50);
+      fill(0);
+  text("KAMIS",195,100);
+  fill(255);
   rect(250,70,50,50);
+      fill(0);
+  text("JUMAT",255,100);
+  fill(255);
   rect(310,70,50,50);
+      fill(0);
+  text("SABTU",315,100);
+  fill(255);
   rect(370,70,50,50);
+      fill(0);
+  text("MINGGU",370,100);
+  fill(255);
   rect(430,70,50,50);
+      fill(0);
+  text("TOTAL",435,100);
+  fill(255);
+
   
 }
 
@@ -60,6 +95,7 @@ void steamchart(float d, int[] data) // hasil copas, ganti semua angles ke var y
 
 void mouseClicked()
 {
+
   //////////////// menentukan bkin grafik apa/////////////////////
   if((mouseX > 10 && mouseX < 110 ) && (mouseY>10 && mouseY < 60))
   {
@@ -229,4 +265,5 @@ void mouseClicked()
       }
     }
   }
+
 }
