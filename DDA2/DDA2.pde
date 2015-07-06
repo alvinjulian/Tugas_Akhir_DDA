@@ -9,10 +9,12 @@ void setup()
   noStroke();
   //noLoop();
   stroke(3);
+  background(250);
 }
 
 void draw()
 { 
+  
   drawrect();
   if(tombol == true)
   {  
@@ -23,7 +25,9 @@ void draw()
 void drawrect()
 {
   textSize(18);
+  fill(0);
   text("Statistik Data Steam",600,20);
+  fill(255);
   textSize(13);
 
   fill(255);
@@ -81,10 +85,7 @@ void steamchart(float d, int[] data) // hasil copas, ganti semua angles ke var y
   for (int i = 0; i < data.length; i++) 
   {
     
-    float gray =  map  (i, 0, data.length, 0, 255);
-    float red  =  map  ((float)data[i],0,data.length,0,255);
-    float blue =  map  (lastAngle,0,360,0,255);
-    fill(gray,red,blue);
+    fill(random(0,255),random(0,255),random(0,255));
     arc(width/2, height/2, d, d, lastAngle, lastAngle+radians(data[i]));
     lastAngle += radians(data[i]);
   }
@@ -110,7 +111,7 @@ void mouseClicked()
     if(mouseButton == LEFT)
     {
        grapik=1;//pie chart
-       background(0);
+       //background(0);
     }
   }
   else if((mouseX > 120 && mouseX < 220 ) && (mouseY>10 && mouseY < 60))
@@ -118,7 +119,7 @@ void mouseClicked()
     if(mouseButton == LEFT)
     {
        grapik=2;//batang
-       background(200);
+       //background(200);
     }
   }
   ///////////// menentukan hari ////////////////////////////////////////
@@ -129,7 +130,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(100); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(100); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);
@@ -140,7 +141,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(120); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(120); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data2.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -150,7 +151,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(220); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(220); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data3.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -160,7 +161,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(20); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(20); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data4.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -171,7 +172,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(70); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(70); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data5.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -181,7 +182,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(260); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(260); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data6.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -192,7 +193,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(10); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(10); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data7.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
@@ -202,7 +203,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(0); /// masukin chart pie hapus background kalau gk perlu
+        background(250);//background(0); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "datatotal.txt");
         data = int(split(stuff[0], ','));
         steamchart(300, data);      }
