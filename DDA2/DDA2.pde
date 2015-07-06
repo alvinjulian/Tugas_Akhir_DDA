@@ -1,4 +1,5 @@
 int[] data;
+String[] nama;
 boolean tombol=false;
 int grapik=0;
 
@@ -79,24 +80,31 @@ void drawrect()
 
 
 /// bkin pie chart
-void steamchart(float d, int[] data) // hasil copas, ganti semua angles ke var yg bakal dibuat
+void steamchart(float d, int[] data,String[] nama) // hasil copas, ganti semua angles ke var yg bakal dibuat
 {
   float lastAngle = 0;
   for (int i = 0; i < data.length; i++) 
   {
     
     fill(random(0,255),random(0,255),random(0,255));
+    rect(1000,200+(i*30),10,10);
+    float persen=data[i]*100/360;
+    text(nama[i]+"= "+persen+"%",1020,200+(i*30)); 
     arc(width/2, height/2, d, d, lastAngle, lastAngle+radians(data[i]));
     lastAngle += radians(data[i]);
   }
 }
 
-void steamblocks(float d, int[] data) // hasil copas, ganti semua angles ke var yg bakal dibuat
+void steamblocks(float d, int[] data,String[] nama) // hasil copas, ganti semua angles ke var yg bakal dibuat
 {
   translate(400,100);
   for (int i = 0; i < data.length; i++) 
   {
+
     fill(random(0,255),random(0,255),random(0,255));
+        rect(600,100+(i*30),10,10);
+    float persen=data[i]*100/360;
+    text(nama[i]+"= "+persen+"%",600,100+(i*30)); 
     rect(i*50,200-data[i]+100,40,data[i]+100);
   }
   translate(-400,-100);
@@ -132,8 +140,10 @@ void mouseClicked()
       {
         background(250);//background(100); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data.txt");
+         String[] penj=loadStrings("nama.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);
+        steamchart(300, data,nama);
         
       }
     }
@@ -143,8 +153,11 @@ void mouseClicked()
       {
         background(250);//background(120); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data2.txt");
+        String[] penj=loadStrings("nama2.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);      
+      }
     }
   
     else if ((mouseX > 130 && mouseX < 180 ) && (mouseY>70 && mouseY <120 ))
@@ -153,8 +166,11 @@ void mouseClicked()
       {
         background(250);//background(220); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data3.txt");
+         String[] penj=loadStrings("nama3.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);
+      }
     }
   
     else if ((mouseX > 180 && mouseX < 240 ) && (mouseY>70 && mouseY <120 ))
@@ -163,8 +179,11 @@ void mouseClicked()
       {
         background(250);//background(20); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data4.txt");
+         String[] penj=loadStrings("nama4.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);     
+      }
     }
   
   
@@ -174,8 +193,11 @@ void mouseClicked()
       {
         background(250);//background(70); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data5.txt");
+         String[] penj=loadStrings("nama5.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);
+      }
     }
   
     else if ((mouseX > 310 && mouseX < 360 ) && (mouseY>70 && mouseY <120 ))
@@ -184,8 +206,11 @@ void mouseClicked()
       {
         background(250);//background(260); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data6.txt");
+         String[] penj=loadStrings("nama6.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);
+      }
     }
   
   
@@ -195,8 +220,11 @@ void mouseClicked()
       {
         background(250);//background(10); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data7.txt");
+         String[] penj=loadStrings("nama7.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);
+      }
     }
   
     else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
@@ -205,8 +233,11 @@ void mouseClicked()
       {
         background(250);//background(0); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "datatotal.txt");
+         String[] penj=loadStrings("nama2.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamchart(300, data);      }
+        steamchart(300, data,nama);
+      }
     }
   
   }
@@ -219,8 +250,10 @@ void mouseClicked()
       {
         background(100,0,100); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data.txt");
+        String[] penj=loadStrings("nama.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
       }
     }
     else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
@@ -229,8 +262,10 @@ void mouseClicked()
       {
         background(120,0,0); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data2.txt");
+        String[] penj=loadStrings("nama2.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
       }
     }
     else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
@@ -247,8 +282,10 @@ void mouseClicked()
       {
     background(120,120,0); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data3.txt");
+        String[] penj=loadStrings("nama3.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
 
       }
     }
@@ -259,8 +296,10 @@ void mouseClicked()
       {
       background(220,0,100); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data4.txt");
+         String[] penj=loadStrings("nama4.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
 
       }
     }
@@ -272,9 +311,10 @@ void mouseClicked()
       {
       background(20,0,20); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data5.txt");
+        String[] penj=loadStrings("nama5.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
-
+        steamblocks(30, data,nama);
       }
     }
   
@@ -285,8 +325,10 @@ void mouseClicked()
     
         background(70,0,30); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data6.txt");
+        String[] penj=loadStrings("nama6.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
       }
     }
   
@@ -298,8 +340,10 @@ void mouseClicked()
     
         background(0,160,0); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data7.txt");
+        String[] penj=loadStrings("nama7.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
+        steamblocks(30, data,nama);
       }
     }
   
@@ -310,10 +354,13 @@ void mouseClicked()
         
         background(120,20,10); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "datatotal.txt");
+        String[] penj=loadStrings("namatotal.txt");
+        nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
-        steamblocks(30, data);
-    }
+        steamblocks(30, data,nama);
+      }
     }                   
   }
-
 }
+
+
