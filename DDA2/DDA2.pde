@@ -292,13 +292,13 @@ void mouseClicked()
       }
     }
   
-    else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
+/*    else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
     {
       if(mouseButton == LEFT)
       {
         background(255); /// masukin chart pie hapus background kalau gk perlu
       }
-    }
+    }                   ///  ini knapa ada sembilan :o
   }
-
+*/
 }
