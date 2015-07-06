@@ -141,7 +141,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(120); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data2.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
     else if ((mouseX > 130 && mouseX < 180 ) && (mouseY>70 && mouseY <120 ))
@@ -149,7 +151,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(220); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data3.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
     else if ((mouseX > 180 && mouseX < 240 ) && (mouseY>70 && mouseY <120 ))
@@ -157,7 +161,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(20); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data4.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
   
@@ -166,7 +172,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(70); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data5.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
     else if ((mouseX > 310 && mouseX < 360 ) && (mouseY>70 && mouseY <120 ))
@@ -174,7 +182,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(260); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data6.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
   
@@ -183,7 +193,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(10); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "data7.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
     else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
@@ -191,7 +203,9 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
         background(0); /// masukin chart pie hapus background kalau gk perlu
-      }
+        String[] stuff = loadStrings( "datatotal.txt");
+        data = int(split(stuff[0], ','));
+        steamchart(300, data);      }
     }
   
   }
