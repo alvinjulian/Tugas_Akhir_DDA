@@ -1,0 +1,60 @@
+Senin:
+Dota 2 : 42%
+CS:GO : 33%
+Team Fortress 2 : 4%
+ARK : 4%
+Clicker Heroes : 3%
+Garry's Mod : 3%
+Sid Meier's Civilization : 3%
+GTA V : 3%
+The Elder Scroll V Skyrim : 2%
+Football Manager 2015 : 2%
+
+
+Selasa : 
+Dota 2 : 53%
+CS:GO : 25%
+Team Fortress 2 : 5%
+ARK : 3%
+Clicker Heroes : 3%
+Garry Mod : 2%
+Sid Meier's Civilization : 2%
+GTA V : 2%
+The Elder Scroll V Skyrim : 1%
+
+
+Rabu : 
+Dota 2 : 26%
+CS:GO : 16%
+Team Fortress 2 : 4%
+ARK : 3%
+GTA V : 2%
+Clicker Heroes : 2%
+Football Manager 2015 : 2%
+Garry Mod : 2%
+The Elder Scroll V Skyrim : 1%
+
+
+Kamis : 
+Dota 2 : 48%
+CS:GO : 23%
+Team Fortress 2 : 6%
+ARK : 4%
+GTA V : 3%
+Clicker Heroes : 3%
+Football Manager 2015 : 3%
+Garry's Mod : 2%
+The Elder Scroll V Skyrim : 1%
+
+
+Jumat : 
+Dota 2 : 42%
+CS:GO : 25%
+Terraria : 8%
+Team Fortress 2 : 4%
+ARK : 3%
+GTA V : 3%
+Clicker Heroes : 3%
+Football Manager 2015 : 3%
+Sid Meier's Civilization : 2%
+Garry's Mod : 2%
