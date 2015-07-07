@@ -58,3 +58,29 @@ Clicker Heroes : 3%
 Football Manager 2015 : 3%
 Sid Meier's Civilization : 2%
 Garry's Mod : 2%
+
+
+Sabtu : 
+Dota2 : 50%
+CS:GO : 19%
+Team Fortress 2 : 8%
+ARK : 5%
+Clicker Heroes : 3%
+Garry's Mod : 3%
+Sid Meier's Civilization V : 3%
+GTA V : 2%
+The Elder Scroll V : Skryrim : 2%
+Football Manager 2015 : 1%
+
+
+Minggu :
+Dota 2 : 42%
+CS:GO : 33%
+Terraria : 4%
+Team Fortress 2 : 4%
+ARK : 3%
+Clicker Heroes : 3%
+GTA V : 3%
+Garry's Mod : 3%
+Sid Meier's Civilization V : 2%
+The Elder Scrolls V : Skyrim : 2%
