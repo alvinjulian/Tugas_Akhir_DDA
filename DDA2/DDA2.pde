@@ -70,10 +70,7 @@ void drawrect()
       fill(0);
   text("MINGGU",370,100);
   fill(255);
-  rect(430,70,50,50);//
-      fill(0);
-  text("TOTAL",435,100);
-  fill(255);
+
 
   
 }
@@ -226,21 +223,8 @@ void mouseClicked()
         steamchart(300, data,nama);
       }
     }
-  
-    else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
-    {
-      if(mouseButton == LEFT)
-      {
-        background(250);//background(0); /// masukin chart pie hapus background kalau gk perlu
-        String[] stuff = loadStrings( "datatotal.txt");
-         String[] penj=loadStrings("nama2.txt");
-        nama= split(penj[0],',');
-        data = int(split(stuff[0], ','));
-        steamchart(300, data,nama);
-      }
-    }
-  
-  }
+
+}
   ////// char batang////////////////////////////////
   else if(grapik==2)
   {
@@ -346,20 +330,7 @@ void mouseClicked()
         steamblocks(30, data,nama);
       }
     }
-  
-   else if ((mouseX > 430 && mouseX < 480 ) && (mouseY>70 && mouseY <120 ))
-    {
-      if(mouseButton == LEFT)
-      {
-        
-        background(120,20,10); /// masukin chart pie hapus background kalau gk perlu
-        String[] stuff = loadStrings( "datatotal.txt");
-        String[] penj=loadStrings("namatotal.txt");
-        nama= split(penj[0],',');
-        data = int(split(stuff[0], ','));
-        steamblocks(30, data,nama);
-      }
-    }                   
+                 
   }
 }
 
