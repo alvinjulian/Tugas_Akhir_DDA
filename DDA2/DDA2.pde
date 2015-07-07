@@ -232,7 +232,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(100,0,100); /// masukin chart pie hapus background kalau gk perlu
+        background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data.txt");
         String[] penj=loadStrings("nama.txt");
         nama= split(penj[0],',');
@@ -244,7 +244,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-        background(120,0,0); /// masukin chart pie hapus background kalau gk perlu
+        background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data2.txt");
         String[] penj=loadStrings("nama2.txt");
         nama= split(penj[0],',');
@@ -252,19 +252,12 @@ void mouseClicked()
         steamblocks(30, data,nama);
       }
     }
-    else if ((mouseX > 70 && mouseX < 120 ) && (mouseY>70 && mouseY <120 ))
-    {
-      if(mouseButton == LEFT)
-      {
-        
-      }
-    }
   
     else if ((mouseX > 130 && mouseX < 180 ) && (mouseY>70 && mouseY <120 ))
     {
       if(mouseButton == LEFT)
       {
-    background(120,120,0); /// masukin chart pie hapus background kalau gk perlu
+        background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data3.txt");
         String[] penj=loadStrings("nama3.txt");
         nama= split(penj[0],',');
@@ -278,7 +271,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-      background(220,0,100); /// masukin chart pie hapus background kalau gk perlu
+      background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data4.txt");
          String[] penj=loadStrings("nama4.txt");
         nama= split(penj[0],',');
@@ -293,7 +286,7 @@ void mouseClicked()
     {
       if(mouseButton == LEFT)
       {
-      background(20,0,20); /// masukin chart pie hapus background kalau gk perlu
+      background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data5.txt");
         String[] penj=loadStrings("nama5.txt");
         nama= split(penj[0],',');
@@ -307,7 +300,7 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
     
-        background(70,0,30); /// masukin chart pie hapus background kalau gk perlu
+        background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data6.txt");
         String[] penj=loadStrings("nama6.txt");
         nama= split(penj[0],',');
@@ -322,7 +315,7 @@ void mouseClicked()
       if(mouseButton == LEFT)
       {
     
-        background(0,160,0); /// masukin chart pie hapus background kalau gk perlu
+        background(250); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data7.txt");
         String[] penj=loadStrings("nama7.txt");
         nama= split(penj[0],',');
