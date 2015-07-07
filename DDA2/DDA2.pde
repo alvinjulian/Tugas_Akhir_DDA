@@ -2,7 +2,8 @@ int[] data;
 String[] nama;
 boolean tombol=false;
 int grapik=0;
-
+int[] warna;
+color x[];
 void setup()
 {
   size(1280,720);
@@ -11,11 +12,11 @@ void setup()
   //noLoop();
   stroke(3);
   background(250);
+  String[] warn=loadStrings("warna.txt");
+  warna = int(split(warn[0],','));
 }
-
 void draw()
-{ 
-  
+{   
   drawrect();
   if(tombol == true)
   {  
@@ -82,8 +83,10 @@ void steamchart(float d, int[] data,String[] nama) // hasil copas, ganti semua a
   float lastAngle = 0;
   for (int i = 0; i < data.length; i++) 
   {
-    
-    fill(random(0,255),random(0,255),random(0,255));
+    int l=i*3;
+    int m=l+1;
+    int n=m+1;
+    fill(warna[l],warna[m],warna[n]);
     rect(1000,200+(i*30),10,10);
     float persen=data[i]*100/360;
     text(nama[i]+"= "+persen+"%",1020,200+(i*30)); 
@@ -98,8 +101,11 @@ void steamblocks(float d, int[] data,String[] nama) // hasil copas, ganti semua 
   for (int i = 0; i < data.length; i++) 
   {
 
-    fill(random(0,255),random(0,255),random(0,255));
-        rect(600,100+(i*30),10,10);
+    int l=i*3;
+    int m=l+1;
+    int n=l+2;
+    fill(warna[l],warna[m],warna[n]);
+    rect(600,100+(i*30),10,10);
     float persen=data[i]*100/360;
     text(nama[i]+"= "+persen+"%",600,100+(i*30)); 
     rect(i*50,200-data[i]+100,40,data[i]+100);
@@ -137,7 +143,7 @@ void mouseClicked()
       {
         background(250);//background(100); /// masukin chart pie hapus background kalau gk perlu
         String[] stuff = loadStrings( "data.txt");
-         String[] penj=loadStrings("nama.txt");
+         String[] penj=loadStrings("nama.txt"); 
         nama= split(penj[0],',');
         data = int(split(stuff[0], ','));
         steamchart(300, data,nama);
